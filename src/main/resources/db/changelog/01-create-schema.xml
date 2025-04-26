@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="0" author="anonymous">
+        <sql>CREATE
+        EXTENSION IF NOT EXISTS "uuid-ossp";</sql>
+    </changeSet>
+
+    <changeSet id="1745633919059-1" author="Chris Farah">
+        <createTable tableName="users">
+            <column name="id" type="uuid" defaultValueComputed="uuid_generate_v4()">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="firstname" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="phone" type="VARCHAR(255)"/>
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
