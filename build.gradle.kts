@@ -18,6 +18,8 @@ repositories {
 }
 
 dependencies {
+	implementation("org.keycloak:keycloak-admin-client:26.0.5")
+	implementation("org.keycloak:keycloak-core:26.2.1")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
