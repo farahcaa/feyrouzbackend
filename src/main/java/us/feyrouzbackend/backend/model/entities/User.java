@@ -30,6 +30,9 @@ public class User {
   @Column(name = "phone")
   private String phone;
 
+  @Column(name = "emailUpdates")
+  private boolean emailUpdates;
+
   @Column(name = "created_at", nullable = false)
   private Timestamp createdAt;
 
@@ -107,5 +110,12 @@ public class User {
     this.updatedAt = updatedAt;
     return this;
   }
+  public void setEmailUpdates(boolean emailUpdates) {
+    this.emailUpdates = emailUpdates;
+  }
+  public boolean getEmailUpdates(boolean emailUpdates) {
+    return this.emailUpdates = emailUpdates;
+  }
+
 }
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import us.feyrouzbackend.backend.model.dto.auth.LoginRequestDTO;
 
-@Controller("/Auth")
+@Controller
 public class AuthController {
 
     Keycloak keyCloak = KeycloakBuilder.builder().serverUrl("http://localhost:8080/auth").realm("feyrouz").clientId("feyrouz").clientSecret("feyrouz").username("admin").password("admin").build();
